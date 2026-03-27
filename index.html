@@ -9,7 +9,7 @@
 :root{--navy:#1A2540;--navy-dark:#0F1829;--gold:#B8912A;--gold-light:#D4A843;--paper:#F5F2EC;--text:#2C2C2C;--border:#E0DCD4;--negative:#8B2020;}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Noto Sans JP',sans-serif;background:var(--navy-dark);color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
-body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 30% 40%,rgba(184,145,42,0.06) 0%,transparent 60%),radial-gradient(ellipse at 70% 60%,rgba(184,145,42,0.04) 0%,transparent 60%)}
+body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 30% 40%,rgba(184,145,42,0.06) 0%,transparent 60%),radial-gradient(ellipse at 70% 60%,rgba(184,145,42,0.04) 0%,transparent 60%);pointer-events:none}
 .login-container{position:relative;z-index:1;width:100%;max-width:440px;padding:20px}
 .login-card{background:rgba(26,37,64,0.95);border:1px solid rgba(184,145,42,0.15);border-radius:20px;padding:48px 36px;text-align:center;backdrop-filter:blur(20px);box-shadow:0 20px 60px rgba(0,0,0,0.4)}
 .login-logo{margin-bottom:24px}
@@ -133,6 +133,7 @@ function showPortal(){
   document.getElementById('portalScreen').style.display='block';
   document.body.style.background='var(--paper)';
   document.body.style.display='block';
+  document.body.style.overflow='auto';
 }
 function logout(){
   sessionStorage.removeItem('fr_auth');
