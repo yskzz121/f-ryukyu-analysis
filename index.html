@@ -85,24 +85,24 @@ body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:
     </div>
   </div>
   <div class="portal-grid" style="grid-template-columns:1fr 1fr 1fr">
-    <div class="report-card" onclick="openReport('cross-analysis-direct.html')">
+    <a class="report-card" href="./cross-analysis-direct.html" target="_self">
       <div class="rc-icon">🎯</div>
       <div class="rc-title">直接原価計算 クロス分析</div>
       <div class="rc-desc">変動費・固定費の分解、損益分岐点分析、粗利益率の構造変化、値上げ転嫁シミュレーション、在庫・CCC分析。</div>
       <div class="rc-badge">CROSS ANALYSIS</div>
-    </div>
-    <div class="report-card" onclick="openReport('financial-report.html')">
+    </a>
+    <a class="report-card" href="./financial-report.html" target="_self">
       <div class="rc-icon">📊</div>
       <div class="rc-title">財務分析レポート</div>
       <div class="rc-desc">当期7ヶ月の財務指標分析。収益性、安全性、効率性、在庫回転、CCC、経営改善提案を網羅。</div>
       <div class="rc-badge">FINANCIAL</div>
-    </div>
-    <div class="report-card" onclick="openReport('direct-costing-pl.html')">
+    </a>
+    <a class="report-card" href="./direct-costing-pl.html" target="_self">
       <div class="rc-icon">📈</div>
       <div class="rc-title">直接原価計算P/L</div>
       <div class="rc-desc">当期7ヶ月の直接原価計算P/L。月次の粗利益率推移、損益分岐点、感度分析、外れ値アラート付き。</div>
       <div class="rc-badge">DIRECT COSTING</div>
-    </div>
+    </a>
   </div>
   <div class="portal-footer">
     <img src="ui_logo_white.png" alt="U&I" style="height:24px;opacity:0.5;margin-bottom:6px"><br>
@@ -142,11 +142,6 @@ document.getElementById('pwInput').addEventListener('keydown',function(e){
   if(e.key==='Enter') attemptLogin();
 });
 if(sessionStorage.getItem('fr_auth')==='1') showPortal();
-
-function openReport(filename){
-  var base = window.location.href.replace(/\/[^\/]*$/, '/');
-  window.location.href = base + filename;
-}
 </script>
 </body>
 </html>
