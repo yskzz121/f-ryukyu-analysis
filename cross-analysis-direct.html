@@ -383,7 +383,9 @@ tr:hover { background: var(--gold-pale); }
   padding: 28px 20px;
   text-align: center;
 }
-.footer-logo { margin-bottom: 8px; }
+.footer-logo { display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:14px; }
+.footer-logo img { height:28px;opacity:0.85;flex-shrink:0; }
+.footer-logo span { color:var(--gold-light);font-family:'Inter',sans-serif;font-weight:600;font-size:0.85rem;line-height:1;letter-spacing:1.5px; }
 .footer-info { font-size: 0.72rem; margin-bottom: 10px; }
 .footer-confidential {
   font-size: 0.7rem;
@@ -1390,8 +1392,8 @@ tr:hover { background: var(--gold-pale); }
 <div class="footer">
   <div class="footer-content">
     <div class="footer-logo">
-      <img src="ui_logo_white.png" alt="U&I" style="height:28px;opacity:0.8;">
-      <span style="color:var(--gold-light);font-weight:700;font-size:0.85rem;margin-left:8px">U&Iコンサルティング</span>
+      <img src="ui_logo_white.png" alt="U&I">
+      <span>Consulting</span>
     </div>
     <div class="footer-info">
       株式会社エフ琉球 直接原価計算 クロス分析レポート ｜ 分析日: 2026年3月28日
